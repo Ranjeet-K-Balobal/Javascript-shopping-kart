@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="../JS/Web.js"></script>
+</head>
+
+<body>
+  <div>
+    <header1>
+      <nav class="navbar navbar-expand-md bg-light navbar-light " style="height: 40px;">
+        <div class="container-fluid">
+          <a class="navbar" href="#" style="margin-top: 20px;">
+            <img src="../Images/logo.jpg" alt="Logo" width="50" height="50">
+
+          </a>
+          <nav class="navbar navbar-expand-md bg-light navbar-light" style="height: 40px;">
+            <div class="container-fluid">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a href="../HTML/Home.html" class="nav-link"> Find a store | </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"> Help | </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"> Join us | </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"> Sign In | </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </nav>
+    </header1>
+  </div>
+  <div>
+    <header2>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/HTML/Home.html" style="font-size: 24px;">URBAN KICKS</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+                 
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Men
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/HTML/Mensproducts.html">Go to store -></a></li>
+                      
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Women
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/HTML/Womensproducts.html">Go to store -></a></li>
+                      
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Kids
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/HTML/Kidsproducts.html">Take me to store</a></li>
+                      
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      SNKRS
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">out of stock!</a></li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control " type="search" placeholder="Search" aria-label="Search" style="margin-right: 20px;">
+                  <a href="/HTML/Home.html"><img src="../Images/home.png" alt="Like" width="30" height="30" style="margin-right: 10px"></a>
+                  <a href="/HTML/Cart.html"><img src="../Images/cart.png" alt="cart" width="30" height="30" style="margin-right: 20px;"></a>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header2>
+  </div>
+  <div class="pro" id="cart-items-container">
+    <div class="container">
+      <div class="row">
+        <div class=" col-md-3" style="padding-bottom: 40px;">
+          <div class="card" style="width:100%;">
+            <img src="https://source.unsplash.com/200x200?reebok shoe" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">StrideSense</h5>
+              <p class="card-text"> A comfortable shoe.</p>
+
+              <span class="price">₹599</span>
+              <br>
+              <br>
+              <!-- <a href="#" class="btn btn-primary">Add to cart</a> -->
+              
+
+            </div>
+          </div>
+        </div>
+        <div class=" col-md-3" style="padding-bottom: 40px;">
+          <div class="card" style="width:100%;">
+            <img src="https://source.unsplash.com/200x200?reebok shoe" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">StrideSense</h5>
+              <p class="card-text"> A comfortable shoe.</p>
+
+              <span class="price">₹599</span>
+              <br>
+              <br>
+              <button class="btn btn-primary" onclick="addToCart('title','text', 'price')">Add to Cart</button>
+
+            </div>
+          </div>
+        </div>
+        
+      <div class="col col-lg-3 col-sm-12">
+        <div class="card" style="width: 100%;">
+          <img src="https://source.unsplash.com/200x200?nike sneaker" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">RetroGlide</h5>
+            <p class="card-text"> A stylish sneaker with a vintage touch.</p>
+
+            <span class="price">₹579</span>
+            <br>
+            <br>
+            <a href="#" id="addtoCartButton"  onclick="addToCart('title','text', 'price')"class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 col-sm-12 ">
+        <div class="card" style="width: 100%;">
+          <img src="https://source.unsplash.com/200x200?nike shoes" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">SoleMotion</h5>
+            <p class="card-text"> All size available</p>
+            <span class="price">₹699</span>
+            <br>
+            <br>
+            <a href="#" id="addtoCartButton" onclick="addToCart('title','text', 'price')" class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 col-sm-12">
+        <div class="card" style="width: 100%;">
+          <img src="https://source.unsplash.com/200x200?adidas shoe" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">UrbanEdge</h5>
+            <p class="card-text"> All size available</p>
+            <span class="price">₹659</span>
+            <br>
+            <br>
+            <a href="#" id="addtoCartButton" onclick="addToCart('title','text', 'price')" class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 col-sm-12">
+        <div class="card" style="width: 100%;">
+          <img src="https://source.unsplash.com/200x200?campus shoe" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">ElevateFlex</h5>
+            <p class="card-text"> All size available</p>
+            <span class="price">₹499</span>
+            <br>
+            <br>
+            <a href="#" id="addtoCartButton" onclick="addToCart('title','text', 'price')"  class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 col-sm-12">
+        <div class="card" style="width: 100%;">
+          <img src="https://source.unsplash.com/200x200?puma shoe" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">AdventureTrail</h5>
+            <p class="card-text"> All size available</p>
+            <span class="price">₹899</span>
+            <br>
+            <br>
+            <a href="#" id="addtoCartButton" onclick="addToCart('title','text', 'price')" class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 col-sm-12">
+        <div class="card">
+          <img src="https://source.unsplash.com/200x200?jordan shoe" length="50px" width="50px" class="card-img-top"
+            alt="...">
+          <div class="card-body">
+            <h5 class="card-title">GlamStride</h5>
+            <p class="card-text"> All size available</p>
+            <span class="price">₹999</span>
+            <br>
+            <br>
+            <a href="#" id="addtoCartButton" onclick="addToCart('title','text', 'price')" class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 col-sm-12">
+        <div class="card" style="width: 100%;">
+          <img src="https://source.unsplash.com/200x200?bata shoe" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">SportFusion</h5>
+            <p class="card-text"> All size available</p>
+            <span class="price">₹1209</span>
+            <br>
+            <br>
+            <a href="#" id="addtoCartButton" onclick="addToCart('title','text', 'price')" class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+    </div>
+  </div>
+  <script src="path/to/web.js"></script>
+
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+<br>
+<br>
+<footer class="footer">
+
+  <div class="container-fluid " style="background-color: rgb(90, 90, 90);">
+    <div class="row">
+      <div class="col-md-6">
+        <br>
+        <h5>About Us</h5>
+        <p>We are committed to delivering quality products and exceptional service.</p>
+        <h5>Contact Us</h5>
+        <p>12 Main Street, Belgaum, KA,India</p>
+        <p>Email: info@urbankicks.com</p>
+        <p>Phone: +91 95162 84756</p>
+      </div>
+      <div class="col-md-5 text-md-end">
+        <a href="#" target="_blank"><i class="fab fa-facebook fa-2x" style="color: white;"></i></a>
+        <br>
+        <a href="#" target="_blank"><i class="fab fa-twitter fa-2x" style="color: white;"></i></a>
+        <br>
+        <a href="#" target="_blank"><i class="fab fa-instagram fa-2x" style="color: white;"></i></a>
+      </div>
+
+    </div>
+    <h5 style="text-align: center;"> 2023 Your Website. All rights reserved.</h5>
+  </div>
+</footer>
+
+</html>

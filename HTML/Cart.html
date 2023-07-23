@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../JS/Web.js"></script>
+
+
+</head>
+
+<body>
+
+    <div>
+        <header1>
+            <nav class="navbar navbar-expand-md bg-light navbar-light " style="height: 40px;">
+                <div class="container-fluid">
+                    <a class="navbar" href="#" style="margin-top: 20px;">
+                        <img src="../Images/logo.jpg" alt="Logo" width="50" height="50">
+
+                    </a>
+                    <nav class="navbar navbar-expand-md bg-light navbar-light" style="height: 40px;">
+                        <div class="container-fluid">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <a href="../HTML/Home.html" class="nav-link"> Find a store | </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"> Help | </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"> Join us | </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"> Sign In | </a>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+            </nav>
+        </header1>
+    </div>
+    <div>
+        <header2>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/HTML/Home.html" style="font-size: 24px;">URBAN KICKS</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Men
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/HTML/Mensproducts.html">Go to store -></a></li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Women
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/HTML/Womensproducts.html">Go to store -></a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Kids
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/HTML/Kidsproducts.html">Take me to store</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    SNKRS
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">out of stock!</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control " type="search" placeholder="Search" aria-label="Search"
+                                style="margin-right: 20px;">
+                            <a href="/HTML/Home.html"><img src="../Images/home.png" alt="Like" width="30" height="30"
+                                    style="margin-right: 10px"></a>
+                            <a href="/HTML/Cart.html"><img src="../Images/cart.png" alt="cart" width="30" height="30"
+                                    style="margin-right: 20px;"></a>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header2>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+      
+          var cartContainer = document.getElementById('cart-items-container');
+      
+          cartItems.forEach(function(item) {
+            var cartItem = document.createElement("div");
+            cartItem.classList.add("cart-item");
+      
+            cartItem.innerHTML = `
+              <p>${item.title}</p>
+              <p>${item.text}</p>
+              <p>${item.price}</p>
+              <button class="btn btn-danger" onclick="removeFromCart(this)">Remove</button>
+            `;
+      
+            cartContainer.appendChild(cartItem);
+          });
+        });
+      
+        function removeFromCart(button) {
+          var cartItem = button.parentNode;
+          var cartContainer = cartItem.parentNode;
+          cartContainer.removeChild(cartItem);
+      
+          var item = {
+            title: cartItem.querySelector("p:nth-child(1)").textContent,
+            text: cartItem.querySelector("p:nth-child(2)").textContent,
+            price: cartItem.querySelector("p:nth-child(3)").textContent
+          };
+      
+          var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+          var updatedItems = cartItems.filter(function(cartItem) {
+            return cartItem.title !== item.title;
+          });
+      
+          localStorage.setItem('cartItems', JSON.stringify(updatedItems));
+        }
+      </script>
+      
+    <script src="../JS/Web.js"></script>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+<br>
+<br>
+<footer class="footer">
+    <div class="container-fluid " style="background-color: rgb(90, 90, 90);">
+        <div class="row">
+            <div class="col-md-6">
+                <br>
+                <h5>About Us</h5>
+                <p>We are committed to delivering quality products and exceptional service.</p>
+                <h5>Contact Us</h5>
+                <p>12 Main Street, Belgaum, KA,India</p>
+                <p>Email: info@urbankicks.com</p>
+                <p>Phone: +91 95162 84756</p>
+            </div>
+            <div class="col-md-5 text-md-end">
+                <a href="#" target="_blank"><i class="fab fa-facebook fa-2x" style="color: white;"></i></a>
+                <br>
+                <a href="#" target="_blank"><i class="fab fa-twitter fa-2x" style="color: white;"></i></a>
+                <br>
+                <a href="#" target="_blank"><i class="fab fa-instagram fa-2x" style="color: white;"></i></a>
+            </div>
+
+        </div>
+        <h5 style="text-align: center;"> 2023 Your Website. All rights reserved.</h5>
+    </div>
+</footer>
+
+</html>

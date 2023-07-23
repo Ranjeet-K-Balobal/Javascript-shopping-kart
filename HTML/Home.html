@@ -7,71 +7,210 @@
   <title>Shopping Cart</title>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="../JS/Web.js"></script>
 </head>
 
 <body>
-  <!-- -----header------- -->
   <header>
-    <nav>
-      <!-- <a href="">Shopping Cart</a> -->
-      <h2>Shopping Cart</h2>
-      <i class="bx bxs-shopping-bag"></i>
-    </nav>
-  </header>
- 
     <div>
-      <h2 class="heading">Shopping Products</h2>
-    </div>
-    <section>
-    <div class="item">
-      <img src="../Images/shoe1.jpg" alt="" />
-      <h3>Wildcraft bag</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-      <h4>$200</h4>
-      </div>
-      <div class="item">
-        <img src="../Images/shoe2.jpg" alt="" />
-        <h3>Polino bag</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        <h4>$300</h4>
-        </div>
-        <div class="item">
-          <img src="../Images/shoe3.jpg" alt="" />
-          <h3>Adidas bag</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          <h4>$206</h4>
-          </div>
-          <div class="item">
-            <img src="../Images/shoe4.jpg" alt="" />
-            <h3>Nike bag</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            <h4>$270</h4>
+      <header1>
+        <nav class="navbar navbar-expand-md bg-light navbar-light " style="height: 40px;">
+          <div class="container-fluid" >
+            <a class="navbar" href="#" style="margin-top: 20px;">
+              <img src="../Images/logo.jpg" alt="Logo" width="50" height="50"  >
+            
+            </a>
+          <nav class="navbar navbar-expand-md bg-light navbar-light" style="height: 40px;">
+            <div class="container-fluid">
+                
+              <ul class="navbar-nav me-auto" >
+
+              
+                <li class="nav-item">
+                  <a href="#" class="nav-link"> Find a store | </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"> Help | </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"> Join us | </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link"> Sign In | </a>
+                </li>
+              </ul>
             </div>
-            <div class="item">
-              <img src="../Images/shoe5.jpg" alt="" />
-              <h3>Pole star bag</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-              <h4>$200</h4>
-              </div>
-              <div class="item">
-                <img src="../Images/shoe6.jpg" alt="" />
-                <h3>Wildcraft bag</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                <h4>$500</h4>
-                </div>
-                <div class="item">
-                  <img src="../Images/shoe7.jpg" alt="" />
-                  <h3>Puma bag</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                  <h4>$300</h4>
-                  </div>
-                  <div class="item">
-                    <img src="../Images/shoe8.jpg" alt="" />
-                    <h3>Adobe bag</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                    <h4>$204</h4>
-                  </div>
-  </section>
+          </nav>
+        </div>
+      </header1>
+    </div>  
+    <div>
+      <header2>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../HTML/Home.html" style="font-size: 24px;">URBAN KICKS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+               
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Men
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../HTML/Mensproducts.html">Go to store -></a></li>
+                    
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Women
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../HTML/Womensproducts.html">Go to store -></a></li>
+                    
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Kids
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../HTML/Kidsproducts.html">Take me to store</a></li>
+                    
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    SNKRS
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">out of stock!</a></li>
+                    
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control " type="search" placeholder="Search" aria-label="Search" style="margin-right: 20px;">
+                <a href="../HTML/Home.html"><img src="../Images/home.png" alt="Like" width="30" height="30" style="margin-right: 10px"></a>
+                <a href="../HTML/Cart.html"><img src="../Images/cart.png" alt="cart" width="30" height="30" style="margin-right: 20px;"></a>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header2>
+    </div>
+  </header>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://source.unsplash.com/1720x480?nike" class="d-block w-80" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/1720x480?adidas" class="d-block w-80" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/1720x480?sneakers" class="d-block w-80" alt="...">
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 10px;margin-left: 50px;margin-right: 250px;">
+    <h1>Men</h1>
+    <div class="card mb-3  " >
+      <div class="row ">
+        <div class="col-md-5">
+          <img src="https://source.unsplash.com/680x680?sportsmen" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col">
+          <div class="card-body">
+            <h3 class="card-title">Bold & Brash</h3>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p class="card-text"> Step up your footwear game with our collection of men's shoes. From casual sneakers to formal dress shoes, find the perfect pair to complete your look. Explore the latest styles and discover the comfort and quality you deserve.</p>
+            <p class="card-text"><small class="text-body-secondary">30% off on sports wears!</small></p>
+            <a href="#" class="btn btn-dark">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 10px;margin-left: 350px;margin-right: 50px;">
+    <h1 style="margin-right:50px;" >Women</h1>
+    <div class="card mb-3  " >
+      <div class="row ">
+        <div class="col-md-5">
+          <img src="https://source.unsplash.com/680x680?sportswomen" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col">
+          <div class="card-body">
+            <h3 class="card-title">Heel Heaven</h3>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p class="card-text">Step into a world of elegance and grace with our exquisite collection of high heels. Heel Haven offers a sanctuary for shoe enthusiasts, where you can find a stunning array of beautiful and sophisticated footwear. Our meticulously crafted heels will elevate your style and empower your confidence with every step. From sleek stilettos to glamorous platforms, our collection embodies timeless charm and irresistible allure. Discover the perfect pair that will make heads turn and hearts skip a beat. Welcome to Heel Haven, where your shoe dreams come true.</p>
+            <p class="card-text"><small class="text-body-secondary">30% off on fancy sole!</small></p>
+            <a href="#" class="btn btn-dark">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 10px;margin-left: 50px;margin-right: 250px;">
+    <h1 style="margin-left: 00px;" >Kids</h1>
+    <div class="card mb-3  " >
+   
+
+      <div class="row ">
+        <div class="col-md-5">
+          <img src="https://source.unsplash.com/680x680?kidsshoe" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col">
+          <div class="card-body">
+            <h3 class="card-title">Playful</h3>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p class="card-text">Let your little ones embark on a whimsical adventure with our Playful Kids collection. From vibrant sneakers to cute sandals, we offer a wide range of comfortable and stylish shoes for children. Designed with their playful spirits in mind, our shoes are crafted to withstand active play and provide the necessary support for growing feet. Spark their imagination with fun colors, adorable patterns, and delightful embellishments. Whether they're running, jumping, or exploring, our shoes will keep them comfortable and looking cute every step of the way. Explore our Playful Kids collection and let their little feet shine.</p>
+            <p class="card-text"><small class="text-body-secondary">10% off on 2 orders!</small></p>
+            <a href="#" class="btn btn-dark">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+<footer class="footer">
+  <div class="container-fluid " style="background-color: rgb(90, 90, 90);">
+    <div class="row">
+      <div class="col-md-6">
+        <br>
+        <h5>About Us</h5>
+        <p>We are committed to delivering quality products and exceptional service.</p>
+        <h5>Contact Us</h5>
+        <p>12 Main Street, Belgaum, KA,India</p>
+        <p>Email: info@urbankicks.com</p>
+        <p>Phone: +91 95162 84756</p>
+      </div>
+      <div class="col-md-5 text-md-end">
+        <a href="#" target="_blank"><i class="fab fa-facebook fa-2x" style="color: white;"></i></a>
+        <br>
+        <a href="#" target="_blank"><i class="fab fa-twitter fa-2x" style="color: white;"></i></a>
+        <br>
+        <a href="#" target="_blank"><i class="fab fa-instagram fa-2x" style="color: white;"></i></a>
+      </div>
+      
+    </div>
+    <h5 style="text-align: center;"> 2023 Your Website. All rights reserved.</h5>
+  </div>
+</footer>
 
 </html>
